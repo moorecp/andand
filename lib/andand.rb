@@ -97,22 +97,20 @@ end
 class Object
   include AndAnd::ObjectGoodies
 end
-  
-unless Module.constants.map { |c| c.to_s }.include?('BlankSlate')
- if Module.constants.map { |c| c.to_s }.include?('BasicObject')
-    module AndAnd
-      class BlankSlate < BasicObject
-      end
+
+if Module.constants.map { |c| c.to_s }.include?('BasicObject')
+  module AndAnd
+    class BlankSlate < BasicObject
     end
-  else
-    module AndAnd
-      class BlankSlate
-        def self.wipe
-          instance_methods.reject { |m| m =~ /^__/ }.each { |m| undef_method m }
-        end
-        def initialize
-          BlankSlate.wipe
-        end
+  end
+else
+  module AndAnd
+    class BlankSlate
+      def self.wipe
+        instance_methods.reject { |m| m =~ /^__/ }.each { |m| undef_method m }
+      end
+      def initialize
+        BlankSlate.wipe
       end
     end
   end
