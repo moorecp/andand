@@ -67,6 +67,11 @@ describe AndAnd, "Basic Behaviour" do
     (nil.andand * 2).should == nil
     (false.andand * 2).should == false
   end
+  it "should conditionally proxy to_s" do
+    5.andand.to_s.should == '5'
+    nil.andand.to_s.should == nil
+    false.andand.to_s.should == false
+  end
 end
 
 describe AndAnd, "Me" do
