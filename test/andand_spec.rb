@@ -26,7 +26,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 =end
 
-require File.dirname(__FILE__) + '/test_helper.rb'
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'test', 'test_helper'))
 
 require 'andand'
 
