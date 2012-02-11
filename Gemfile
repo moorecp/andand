@@ -1,4 +1,4 @@
 source :gemcutter
 
 gem 'rake'
-gem 'rspec', '~> 1.3.1'
+gem 'rspec', '~> 2.0'
