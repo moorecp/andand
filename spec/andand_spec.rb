@@ -26,9 +26,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 =end
 
-require File.expand_path(File.join(File.dirname(__FILE__), '..', 'test', 'test_helper'))
-
-require 'andand'
+require 'spec_helper'
 
 class Symbol
   def to_proc
