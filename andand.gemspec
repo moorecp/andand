@@ -12,9 +12,6 @@ Gem::Specification.new do |s|
              "README.textile",
              "lib/andand.rb",
              "lib/andand/version.rb"]
-  s.test_files = [
-      "test/andand_spec.rb",
-      "test/test_helper.rb"]
   s.rdoc_options = ["--main", "README.textile"]
   s.extra_rdoc_files = ["History.txt", "README.textile"]
 end
